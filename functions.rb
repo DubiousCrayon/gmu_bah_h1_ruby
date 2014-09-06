@@ -2,8 +2,15 @@
 
 def reverse(an_array)
 
-  # write your code here
-
+  # return an_array.reverse!
+  index = an_array.length - 1
+  an_array_new = []
+  an_array.each {|x| 
+                 an_array_new[index] = x
+                index -= 1
+                }
+  return an_array_new
+  
 end
 
  
