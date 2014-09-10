@@ -75,7 +75,18 @@ end
 
 def fizzbuzz
 
-  # write your code here
+  fb_array = (1..100).to_a
+  for i in fb_array
+    if i % 3 == 0
+      if i % 5 == 0
+        fb_array[i-1] = 'FizzBuzz'
+      else 
+        fb_array[i-1] = 'Fizz'
+      end
+    elsif i % 5 == 0
+      fb_array[i-1] = 'Buzz'
+    end
+  end
 
 end
 
