@@ -22,8 +22,16 @@ end
 # For example, histogram('Hello') returns {'h'=>1,'e'=>1,'l'=>2,'o'=>1}
 
 def histogram(a_string)
-
-  # write your code here
+  first = a_string[0].downcase  
+  letter_hash = {first => 0}
+  a_string.downcase.each_char { |index|
+    if letter_hash[index]
+      letter_hash[index] = letter_hash[index] + 1
+    else  
+      letter_hash[index] = 1
+    end
+  }
+  return letter_hash
 
 end
 
