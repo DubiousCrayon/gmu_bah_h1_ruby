@@ -47,7 +47,13 @@ end
 
 def sum_only_numbers(an_array)
 
-  # write your code here
+  count = 0
+  an_array.map {|index| 
+    if index.is_a? Fixnum or index.is_a? Float
+      count += index
+    end
+    }
+  return count
 
 end
 
