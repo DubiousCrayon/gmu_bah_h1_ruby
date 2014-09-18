@@ -3,6 +3,7 @@
 def reverse(an_array)
 
   # return an_array.reverse!
+
   index = an_array.length - 1
   an_array_new = []
   an_array.each {|x| 
@@ -25,10 +26,12 @@ def histogram(a_string)
   first = a_string[0].downcase  
   letter_hash = {first => 0}
   a_string.downcase.each_char { |index|
-    if letter_hash[index]
-      letter_hash[index] = letter_hash[index] + 1
-    else  
-      letter_hash[index] = 1
+    if index != " "
+      if letter_hash[index]
+        letter_hash[index] = letter_hash[index] + 1
+      else  
+        letter_hash[index] = 1
+      end
     end
   }
   return letter_hash
